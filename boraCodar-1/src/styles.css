@@ -1,0 +1,154 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0F0D13;
+  font-family: 'Roboto', sans-serif;
+}
+
+#app {
+  display: grid;
+
+  grid-template-columns: max-content max-content;
+  grid-template-areas:
+    'A B'
+    'A C';
+  height: 100vh;
+  place-content: center;
+  gap: 32px;
+}
+
+.player {
+  background: #2A2141;
+  border-radius: 8px;
+  font-size: 1.75rem;
+}
+
+#player-1  {
+  grid-area: A;
+  padding: 50px 30px;
+}
+
+#player-1 .wrapper {
+  width: 190px;
+}
+
+.wrapper {
+
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.wrapper > img {
+  object-fit: cover;
+  width: 190px;
+  height: 190px;
+  border-radius: 6px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.info h1 {
+  color: #E1E1E6;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.info p {
+  color: #E1E1E6;
+  font-weight: 400;
+  font-size: 1.125rem;
+  opacity: 0.67;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.controls img {
+  cursor: pointer;
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.track-time {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.track {
+  position: relative;
+  cursor: pointer;
+}
+
+.track::before {
+  content: '';
+  width: 100%;
+  height: 6px;
+  display: block;
+  background: #D9D9D9;
+  border-radius: 10px;
+  position: absolute;
+  opacity: 0.3;
+}
+
+.track::after {
+  content: '';
+  width: 80%;
+  height: 6px;
+  display: block;
+  background: #D9D9D9;
+  border-radius: 10px;
+  position: absolute;
+}
+
+.time {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.time div {
+  color: #C4C4CC;
+  line-height: 1.6;
+  font-size: 0.75rem;
+  opacity: 0.6;
+}
+
+
+
+#player-2 {
+  grid-area: B;
+  padding: 28px;
+}
+
+.wrapper-info {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+
+.wrapper-info > img {
+  object-fit: cover;
+  width: 84px;
+  height: 84px;
+  border-radius: 6px;
+}
+
+#player-3 {
+  grid-area: C;
+  padding: 28px;
+}
+
