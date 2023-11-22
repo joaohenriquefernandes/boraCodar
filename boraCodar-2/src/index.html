@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" class="animated">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@600&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bora Codar - Card de Produto - 02</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <section class="left">
+      <button id="btn-360" onclick=toggle()>
+        <img src="../assets/more-info.svg" alt="">
+      </button>
+
+      <button id="btn-close" onclick="toggle()">
+        <img src="../assets/close.svg" alt="">
+      </button>
+
+      <img id="static" src="../assets/product.png" alt="">
+
+      <img id="animated" src="../assets/product-animated.gif" alt="">
+    </section>
+
+    <section class="right">
+      <p>CÓDIGO: 42404</p>
+      <h1>Sofá Margot II - Rosé</h1>
+      <span>R$ 4.000</span>
+      <button>ADICIONAR À CESTA</button>
+    </section>
+  </div>
+  
+  <script>
+    function toggle() {
+      document.documentElement.classList.toggle('animated')
+    }
+  </script>
+</body>
+</html>
